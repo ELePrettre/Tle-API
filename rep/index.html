@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<title>Prévision météo</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+	</head>
+<body>
+    <h1>Prévision météo</h1>
+    <form action="http://localhost:5000/" method="post">
+        <label class="question">De quelle ville voulez vous connaitre la meteo ?</label>
+            <textarea class="block1" name="text1" rows="1">{{text1}}</textarea><br>
+            <input class="button block" type="submit" value="Envoyer" /><br>
+            <label>Vous êtes à</label>
+            <textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{result0}}</textarea><br>
+        <label>La temperature moyenne est (°C)</label>
+            <textarea class="block" name="result" rows="1" cols="3" readonly="readonly">{{result1}}</textarea><br>
+        <label>Les temperatures varient entre (°C)</label>
+            <textarea class="block" name="result" rows="1" cols="3" readonly="readonly">{{result2}}</textarea>et
+            <textarea class="block" name="result" rows="1" cols="3" readonly="readonly">{{result3}}</textarea>
+        <br>
+        <label>Le taux d'humidité est de </label>
+            <textarea class="block" name="result" rows="1" cols="4" readonly="readonly">{{result4}}</textarea><br>
+        <label>Les conditions climatiques </label>
+            <textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{result5}}</textarea><br>
+        <!--<label>geo </label>
+            <textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{mapa}}</textarea><br>
+        -->
+        <table>
+<thead>
+    <tr>
+        <th colspan="3" class="question">Les prévisions</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>DATE</td>
+        <td>Tmoy</td>
+        <td>Conditions climatiques</td>
+    </tr>
+    <tr>
+        <td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat00}}</textarea></td>
+        <td><textarea class="block" name="result" rows="1" cols="4" readonly="readonly">{{resultat01}}</textarea></td>
+        <td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat02}}</textarea></td>
+    </tr>
+    <!--<tr>
+        <td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat10}}</textarea></td>
+        <td><textarea class="block" name="result" rows="1"cols="4" readonly="readonly">{{resultat11}}</textarea></td>
+        <td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat12}}</textarea></td>
+    </tr>-->
+    <tr><td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat20}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="4"readonly="readonly">{{resultat21}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat22}}</textarea></td>		
+    <!--<tr><td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat30}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="4"readonly="readonly">{{resultat31}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat32}}</textarea></td>
+    </tr> -->
+    <tr><td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat40}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="4"readonly="readonly">{{resultat41}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat42}}</textarea></td>
+    </tr>
+     <!--<tr>		<td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat50}}</textarea></td>
+     <tr>		<td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat50}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="4"readonly="readonly">{{resultat51}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat52}}</textarea></td>
+    </tr>-->
+    <tr>		<td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat60}}</textarea></td> 
+    <td><textarea class="block" name="result" rows="1"cols="4"readonly="readonly">{{resultat61}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat62}}</textarea></td>
+    </tr>
+    <!--<tr>		<td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat70}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="4"readonly="readonly">{{resultat71}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat72}}</textarea></td>
+    </tr>-->
+    <tr>		<td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat80}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="4"readonly="readonly">{{resultat81}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat82}}</textarea></td>
+    </tr>
+    <!--<tr>		<td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat90}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="4"readonly="readonly">{{resultat91}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat92}}</textarea></td>
+    </tr>-->
+    <tr>		<td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat100}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="4"readonly="readonly">{{resultat101}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat102}}</textarea></td>
+    </tr>
+    <!--<tr><td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat110}}</textarea></td>
+    <tr><td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat110}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="4"readonly="readonly">{{resultat111}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat112}}</textarea></td>
+     </tr>-->
+    <tr>		<td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat120}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="4"readonly="readonly">{{resultat121}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat122}}</textarea></td>
+    </tr>
+    <!--<tr>		<td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat130}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="4"readonly="readonly">{{resultat131}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat132}}</textarea></td>
+    </tr>-->
+    <tr>		<td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat140}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="4"readonly="readonly">{{resultat141}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat142}}</textarea></td>
+    </tr>
+    <!--<tr>		<td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat150}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="4"readonly="readonly">{{resultat151}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat152}}</textarea></td>
+    </tr>-->
+    <tr><td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat160}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="4"readonly="readonly">{{resultat161}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat162}}</textarea></td></tr>
+    <!--<tr><td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat170}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="4"readonly="readonly">{{resultat171}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat172}}</textarea></td>
+    </tr>-->
+    <tr><td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat180}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="4"readonly="readonly">{{resultat181}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat182}}</textarea></td></tr>
+    <!--<tr><td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat190}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="4"readonly="readonly">{{resultat191}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat192}}</textarea></td>
+    </tr>-->
+    <tr><td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat200}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="4"readonly="readonly">{{resultat201}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat202}}</textarea></td></tr>
+    <!--<tr><td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat210}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="4"readonly="readonly">{{resultat211}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat212}}</textarea></td>
+    </tr>-->
+    <tr><td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat220}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="4"readonly="readonly">{{resultat221}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat222}}</textarea></td></tr>
+    <!--<tr><td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat230}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="4"readonly="readonly">{{resultat231}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat232}}</textarea></td>
+    </tr>-->
+    <tr><td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat240}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="4"readonly="readonly">{{resultat241}}</textarea></td>
+    <td><textarea class="block" name="result" rows="1"cols="25"readonly="readonly">{{resultat242}}</textarea></td></tr>
+
+</tbody>
+</table>
+
+        
+    </form>
+</body>
+</html>
+
